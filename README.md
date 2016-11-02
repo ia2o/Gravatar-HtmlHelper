@@ -1,3 +1,5 @@
+Forked from https://github.com/AndrewFreemantle/Gravatar-HtmlHelper
+
 #Gravatar HtmlHelper for ASP.Net MVC
 
 This is a complete implementation of the [Gravatar](http://www.gravatar.com) image request API, according the [Gravatar documentation](http://en.gravatar.com/site/implement/images/), as an ASP.Net MVC HtmlHelper.
@@ -30,6 +32,11 @@ This is a complete implementation of the [Gravatar](http://www.gravatar.com) ima
     `@Html.GravatarImage("user.name@email.com")`
 
     `@Html.GravatarImage("user.name@email.com", size: 32, defaultImage: GravatarHtmlHelper.DefaultImage.Identicon, rating: GravatarHtmlHelper.Rating.PG)`
+
+
+3. For .NET Core TagHelpers, add the `@addTagHelper *, [ProjectName]` to your `_ViewImport.cshtml` file, then use the `<gravatar />` tag:
+
+`<gravatar email-address="bobisawesome@awesome.net"></gravatar>`
 
 
 That's it. No attribution required, but feel free to [leave a comment on my blog](http://www.fatlemon.co.uk/gravatar) if you find it useful
